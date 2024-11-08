@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 class catalogogeneros : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val rodri="funciona"
         enableEdgeToEdge()
         setContentView(R.layout.activity_catalogogeneros)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
