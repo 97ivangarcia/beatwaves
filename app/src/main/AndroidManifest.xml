@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Beatwaves"
         tools:targetApi="31">
         <activity
+            android:name=".perfiluser"
+            android:exported="false" />
+        <activity
             android:name=".catalogogeneros"
             android:exported="false" />
         <activity

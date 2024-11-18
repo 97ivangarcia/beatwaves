@@ -461,24 +461,71 @@
         app:layout_constraintTop_toTopOf="@+id/imageView9"
         app:layout_constraintVertical_bias="1.0" />
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
+        android:id="@+id/bottom_navigation_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/gray"
-            app:menu="@menu/bottom_navigation_menu"
-            app:itemIconSize="24dp"
-            app:itemIconTint="@color/colorAccent"
-            app:itemTextColor="@color/colorPrimary" />
+        >
 
-    </RelativeLayout>
+        <!-- Botón Home -->
+        <ImageButton
+            android:id="@+id/navigation_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/homepng"
+          android:background="@android:color/transparent"
+            android:layout_weight="1"
+            />
+
+        <!-- Botón Heart -->
+        <ImageButton
+            android:id="@+id/navigation_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heartpng"
+          android:background="@android:color/transparent"
+            android:layout_weight="1"
+            />
+
+        <!-- Botón Menu -->
+        <ImageButton
+            android:id="@+id/navigation_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menupng"
+          android:background="@android:color/transparent"
+            android:layout_weight="1"
+            />
+
+        <!-- Botón Shopping Bag -->
+        <ImageButton
+            android:id="@+id/navigation_shopping_bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shoppingbagpng"
+           android:background="@android:color/transparent"
+            android:layout_weight="1"
+           />
+
+        <!-- Botón User -->
+        <ImageButton
+            android:id="@+id/navigation_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/userpng"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
+
 
 
 
