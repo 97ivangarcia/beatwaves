@@ -29,7 +29,7 @@
         android:layout_width="319dp"
         android:layout_height="43dp"
         android:layout_marginBottom="72dp"
-        android:text="Sonny John Moore, reconocido DJ, productor y músico estadounidense."
+        android:text="Sonny Moore, reconocido DJ, productor y músico estadounidense."
         android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
