@@ -96,7 +96,7 @@
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonsubir"
+        app:layout_constraintTop_toBottomOf="@+id/botonsubirlosdatos"
         tools:ignore="MissingConstraints">
 
         <!-- Contenedor principal que contendrá todas las canciones -->
