@@ -2,6 +2,7 @@ package com.example.beatwaves
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class subircancion : AppCompatActivity() {
         }
         val perfil = findViewById<ImageButton>(R.id.botonperfil);
         val home = findViewById<ImageButton>(R.id.botoncatalogo);
+        val subirdatoscancion = findViewById<Button>(R.id.botonsubirlosdatos);
 
         perfil.setOnClickListener {
             val intent = Intent(this@subircancion, perfiluser::class.java)
@@ -29,6 +31,13 @@ class subircancion : AppCompatActivity() {
         }
         home.setOnClickListener {
             val intent = Intent(this@subircancion, catalogogeneros::class.java)
+            startActivity(intent)
+
+
+        }
+
+        subirdatoscancion.setOnClickListener {
+            val intent = Intent(this@subircancion, datossubida::class.java)
             startActivity(intent)
 
 

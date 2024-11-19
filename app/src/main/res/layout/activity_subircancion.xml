@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.043" />
 
     <Button
-        android:id="@+id/botonsubir"
+        android:id="@+id/botonsubirlosdatos"
         android:layout_width="57dp"
         android:layout_height="49dp"
         android:backgroundTint="#FD00E4"
