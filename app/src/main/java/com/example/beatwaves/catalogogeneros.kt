@@ -35,12 +35,20 @@ class catalogogeneros : AppCompatActivity() {
 
         val botonusuario = findViewById<ImageButton>(R.id.navigation_user);
 
+        val botonsubida = findViewById<ImageButton>(R.id.botonsubida);
 
-
-        botonusuario.setOnClickListener{
+        botonusuario.setOnClickListener {
             val intent = Intent(this@catalogogeneros, perfiluser::class.java)
             startActivity(intent)
+
+
         }
 
+
+        botonsubida.setOnClickListener {
+            val intent = Intent(this@catalogogeneros, subircancion::class.java)
+            startActivity(intent)
+
+        }
     }
 }
