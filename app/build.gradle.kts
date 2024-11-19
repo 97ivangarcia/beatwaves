@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.beatwaves"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.beatwaves"
