@@ -337,7 +337,7 @@
 
         <!-- Botón Home -->
         <ImageButton
-            android:id="@+id/navigation_home"
+            android:id="@+id/botoncatalogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/homepng"
@@ -367,7 +367,7 @@
 
         <!-- Botón Shopping Bag -->
         <ImageButton
-            android:id="@+id/navigation_shopping_bag"
+            android:id="@+id/botonpago"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/shoppingbagpng"
@@ -377,7 +377,7 @@
 
         <!-- Botón User -->
         <ImageButton
-            android:id="@+id/navigation_user"
+            android:id="@+id/botonperfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/userpng"

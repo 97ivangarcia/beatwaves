@@ -621,7 +621,7 @@
 
         <!-- Botón Home -->
         <ImageButton
-            android:id="@+id/navigation_home"
+            android:id="@+id/perfiluserGoHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/homepng"
@@ -631,7 +631,7 @@
 
         <!-- Botón Heart -->
         <ImageButton
-            android:id="@+id/navigation_heart"
+            android:id="@+id/perfiluserGoLikes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/heartpng"
@@ -641,7 +641,7 @@
 
         <!-- Botón Menu -->
         <ImageButton
-            android:id="@+id/navigation_menu"
+            android:id="@+id/perfiluserGoSubir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/menupng"
@@ -651,7 +651,7 @@
 
         <!-- Botón Shopping Bag -->
         <ImageButton
-            android:id="@+id/navigation_shopping_bag"
+            android:id="@+id/perfiluserGoCompra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/shoppingbagpng"
@@ -661,7 +661,7 @@
 
         <!-- Botón User -->
         <ImageButton
-            android:id="@+id/navigation_user"
+            android:id="@+id/perfiluserGoPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/userpng"

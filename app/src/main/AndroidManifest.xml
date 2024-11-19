@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Beatwaves"
         tools:targetApi="31">
         <activity
+            android:name=".datossubida"
+            android:exported="false" />
+        <activity
             android:name=".subircancion"
             android:exported="false" />
         <activity
