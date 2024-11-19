@@ -233,7 +233,7 @@
         app:layout_constraintVertical_bias="0.327" />
 
     <Button
-        android:id="@+id/botoneditar"
+        android:id="@+id/botoneditarperfil"
         android:layout_width="91dp"
         android:layout_height="43dp"
         android:backgroundTint="#FD00E4"
