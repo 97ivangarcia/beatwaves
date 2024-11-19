@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="347dp"
-        android:layout_height="71dp"
+        android:layout_width="318dp"
+        android:layout_height="68dp"
         android:background="#00000000"
         android:text="Crear Cuenta"
         android:textColor="@color/white"
@@ -33,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"

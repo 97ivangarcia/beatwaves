@@ -10,11 +10,10 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="814dp"
-        android:layout_height="520dp"
+        android:layout_width="759dp"
+        android:layout_height="463dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -22,8 +21,8 @@
 
     <ImageView
         android:id="@+id/imageView28"
-        android:layout_width="413dp"
-        android:layout_height="133dp"
+        android:layout_width="398dp"
+        android:layout_height="118dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -70,10 +69,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textotitulo2"
@@ -84,10 +83,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.291" />
+        app:layout_constraintVertical_bias="0.277" />
 
     <TextView
         android:id="@+id/textotitulo3"
@@ -98,10 +97,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.541" />
 
     <TextView
         android:id="@+id/textosubir"
@@ -112,10 +111,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.742" />
+        app:layout_constraintVertical_bias="0.74" />
 
     <TextView
         android:id="@+id/textosubir2"
@@ -126,10 +125,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.94" />
 
     <EditText
         android:id="@+id/textoprecio"
@@ -177,10 +176,10 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/barranavegacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textotitulo"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintVertical_bias="0.929" />
 
     <Button
         android:id="@+id/iniciarsiguiente"

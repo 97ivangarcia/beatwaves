@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="814dp"
-        android:layout_height="520dp"
+        android:layout_width="715dp"
+        android:layout_height="429dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -23,8 +23,8 @@
 
     <ImageView
         android:id="@+id/imageView28"
-        android:layout_width="413dp"
-        android:layout_height="133dp"
+        android:layout_width="402dp"
+        android:layout_height="126dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -70,10 +70,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.027" />
 
     <Button
         android:id="@+id/botonsubirlosdatos"
@@ -85,7 +85,7 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textosubir"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
         app:layout_constraintVertical_bias="0.0" />
