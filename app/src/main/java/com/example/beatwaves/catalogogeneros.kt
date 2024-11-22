@@ -37,6 +37,16 @@ class catalogogeneros : AppCompatActivity() {
 
         val botonsubida = findViewById<ImageButton>(R.id.botonsubida);
 
+        val botonsitodnb = findViewById<Button>(R.id.botondnb);
+
+
+        botonsitodnb.setOnClickListener {
+            val intent = Intent(this@catalogogeneros, generoseleccionado::class.java)
+            startActivity(intent)
+
+
+        }
+
         botonusuario.setOnClickListener {
             val intent = Intent(this@catalogogeneros, perfiluser::class.java)
             startActivity(intent)
