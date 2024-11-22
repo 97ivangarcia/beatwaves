@@ -124,7 +124,7 @@
 
         <!-- Botón Home -->
         <ImageButton
-            android:id="@+id/perfiluserGoHome"
+            android:id="@+id/generoGoHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -133,7 +133,7 @@
 
         <!-- Botón Heart -->
         <ImageButton
-            android:id="@+id/perfiluserGoLikes"
+            android:id="@+id/generoGoLikes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -142,7 +142,7 @@
 
         <!-- Botón Menu -->
         <ImageButton
-            android:id="@+id/perfiluserGoSubir"
+            android:id="@+id/generoGoSubir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -151,7 +151,7 @@
 
         <!-- Botón Shopping Bag -->
         <ImageButton
-            android:id="@+id/perfiluserGoCompra"
+            android:id="@+id/generoGoCompra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -160,7 +160,7 @@
 
         <!-- Botón User -->
         <ImageButton
-            android:id="@+id/perfiluserGoPerfil"
+            android:id="@+id/generoGoPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
