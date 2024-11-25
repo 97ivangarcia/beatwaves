@@ -23,6 +23,9 @@ class generoseleccionado : AppCompatActivity() {
         val generoirhome = findViewById<ImageButton>(R.id.generoGoHome);
         val generoirsubida = findViewById<ImageButton>(R.id.generoGoSubir);
         val generoirperfil = findViewById<ImageButton>(R.id.generoGoPerfil);
+        val generoirlikes = findViewById<ImageButton>(R.id.generoGoLikes);
+
+
         val botonartista1 = findViewById<Button>(R.id.generoboton1);
         val botonartista2 = findViewById<Button>(R.id.generoboton2);
         val botonartista3 = findViewById<Button>(R.id.generoboton3);
@@ -34,6 +37,14 @@ class generoseleccionado : AppCompatActivity() {
 
 
         }
+
+        generoirlikes.setOnClickListener {
+            val intent = Intent(this@generoseleccionado, likes::class.java)
+            startActivity(intent)
+
+
+        }
+
         generoirsubida.setOnClickListener {
             val intent = Intent(this@generoseleccionado, subircancion::class.java)
             startActivity(intent)

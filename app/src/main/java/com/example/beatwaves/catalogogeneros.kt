@@ -34,8 +34,9 @@ class catalogogeneros : AppCompatActivity() {
 
 
         val botonusuario = findViewById<ImageButton>(R.id.navigation_user);
-
         val botonsubida = findViewById<ImageButton>(R.id.botonsubida);
+        val botonlikes = findViewById<ImageButton>(R.id.navigation_heart);
+        val botoncarritomain = findViewById<ImageButton>(R.id.navigation_shopping_bag);
 
         val botonsitodnb = findViewById<Button>(R.id.botondnb);
 
@@ -47,13 +48,25 @@ class catalogogeneros : AppCompatActivity() {
 
         }
 
+        botoncarritomain.setOnClickListener {
+            val intent = Intent(this@catalogogeneros, carrito::class.java)
+            startActivity(intent)
+
+
+        }
+
         botonusuario.setOnClickListener {
             val intent = Intent(this@catalogogeneros, perfiluser::class.java)
             startActivity(intent)
 
 
         }
+        botonlikes.setOnClickListener {
+            val intent = Intent(this@catalogogeneros, likes::class.java)
+            startActivity(intent)
 
+
+        }
 
         botonsubida.setOnClickListener {
             val intent = Intent(this@catalogogeneros, subircancion::class.java)

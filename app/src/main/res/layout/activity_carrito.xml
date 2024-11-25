@@ -6,90 +6,136 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".likes">
+    tools:context=".carrito">
+
+
 
     <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="420dp"
-        android:layout_height="180dp"
-        app:layout_constraintBottom_toTopOf="@+id/tuslikes"
+        android:id="@+id/fondogris"
+        android:layout_width="436dp"
+        android:layout_height="513dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grisoscuro" />
+
+
+    <ImageView
+        android:id="@+id/rectangulogris1"
+        android:layout_width="363dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/rectangulogris2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
         app:srcCompat="@drawable/esquinasredondas" />
 
     <ImageView
-        android:id="@+id/recuadronombre"
-        android:layout_width="259dp"
-        android:layout_height="91dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+        android:id="@+id/rectangulogris2"
+        android:layout_width="363dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/textpedido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.573"
-        app:srcCompat="@drawable/grisoscuro" />
-
-    <ImageView
-        android:id="@+id/recuadrofavoritas"
-        android:layout_width="328dp"
-        android:layout_height="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.521"
-        app:srcCompat="@drawable/grisoscuro" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="153dp"
-        android:layout_height="52dp"
-        android:text="Skrillex"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.575" />
-
-
-    <TextView
-        android:id="@+id/tuslikes"
-        android:layout_width="319dp"
-        android:layout_height="47dp"
-        android:text="Tus canciones favoritas"
-        android:textColor="#FFFFFF"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
-        app:layout_constraintEnd_toEndOf="@+id/recuadrofavoritas"
-        app:layout_constraintStart_toStartOf="@+id/recuadrofavoritas"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.914" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/esquinasredondas" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="@+id/imageView28"
-        app:layout_constraintTop_toTopOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@drawable/skrillex" />
+    <EditText
+        android:id="@+id/direccionusuario"
+        android:layout_width="174dp"
+        android:layout_height="25dp"
+        android:background="#555555"
+        android:backgroundTint="#555555"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="Dirección"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulogris1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulogris1"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="@+id/rectangulogris1"
+        app:layout_constraintTop_toTopOf="@+id/rectangulogris1"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <EditText
+        android:id="@+id/numerotlf"
+        android:layout_width="174dp"
+        android:layout_height="25dp"
+        android:background="#555555"
+        android:backgroundTint="#555555"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="Telefono"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulogris2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulogris2"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="@+id/rectangulogris2"
+        app:layout_constraintTop_toTopOf="@+id/rectangulogris2"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <EditText
+        android:id="@+id/mailcarrito"
+        android:layout_width="174dp"
+        android:layout_height="25dp"
+        android:background="#555555"
+        android:backgroundTint="#555555"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulogris2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulogris2"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="@+id/rectangulogris2"
+        app:layout_constraintTop_toTopOf="@+id/rectangulogris2"
+        app:layout_constraintVertical_bias="0.844" />
+
+    <Button
+        android:id="@+id/aceptardireccion"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FD00E4"
+        android:gravity="center"
+        android:text="✏"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulogris1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulogris1"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="@+id/rectangulogris1"
+        app:layout_constraintTop_toTopOf="@+id/rectangulogris1"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <Button
+        android:id="@+id/aceptardatos"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FD00E4"
+        android:gravity="center"
+        android:text="✏"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulogris2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulogris2"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="@+id/rectangulogris2"
+        app:layout_constraintTop_toTopOf="@+id/rectangulogris2"
+        app:layout_constraintVertical_bias="0.65" />
 
     <ScrollView
-        android:id="@+id/scrollView4"
         android:layout_width="350dp"
-
-        android:layout_height="500dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_layout"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/textpedido">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,8 +177,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -182,8 +229,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -230,8 +278,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -278,8 +327,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -326,8 +376,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -374,8 +425,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -422,8 +474,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hold your color"
-                        android:textColor="@color/white"
+                        android:inputType="numberDecimal"
+                        android:text="2€"
+                        android:textColor="#FD00E4"
                         android:textSize="16sp" />
 
                     <!-- Tercer TextView -->
@@ -440,6 +493,194 @@
         </LinearLayout>
     </ScrollView>
 
+
+    <TextView
+        android:id="@+id/textdir"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:text="Dirección"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulogris1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulogris1"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="@+id/rectangulogris1"
+        app:layout_constraintTop_toTopOf="@+id/rectangulogris1"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <TextView
+        android:id="@+id/textpago"
+        android:layout_width="119dp"
+        android:layout_height="46dp"
+        android:text="Pago"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/rectangulogris1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textpedido"
+        android:layout_width="119dp"
+        android:layout_height="46dp"
+        android:text="Pedido"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="430dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="220dp"
+        app:srcCompat="@drawable/esquinasredondas"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+         />
+
+
+    <TextView
+        android:id="@+id/metodopago"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:text="Método de pago"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <TextView
+        android:id="@+id/textototal"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Total"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/totaleuros"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="€"
+        android:textColor="#FD00E4"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <ImageView
+        android:id="@+id/imagentarjetacarrito"
+        android:layout_width="298dp"
+        android:layout_height="195dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tarjeta" />
+
+    <EditText
+        android:id="@+id/numtarjetacarrito"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="Numero tarjeta"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imagentarjetacarrito"
+        app:layout_constraintEnd_toEndOf="@+id/imagentarjetacarrito"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="@+id/imagentarjetacarrito"
+        app:layout_constraintTop_toTopOf="@+id/imagentarjetacarrito"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <EditText
+        android:id="@+id/cvvcarrito"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="CVV"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imagentarjetacarrito"
+        app:layout_constraintEnd_toEndOf="@+id/imagentarjetacarrito"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="@+id/imagentarjetacarrito"
+        app:layout_constraintTop_toTopOf="@+id/imagentarjetacarrito"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <EditText
+        android:id="@+id/nombretarjetacarrito"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imagentarjetacarrito"
+        app:layout_constraintEnd_toEndOf="@+id/imagentarjetacarrito"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="@+id/imagentarjetacarrito"
+        app:layout_constraintTop_toTopOf="@+id/imagentarjetacarrito"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <EditText
+        android:id="@+id/fechacadcarrito"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:hint="Cad"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imagentarjetacarrito"
+        app:layout_constraintEnd_toEndOf="@+id/imagentarjetacarrito"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="@+id/imagentarjetacarrito"
+        app:layout_constraintTop_toTopOf="@+id/imagentarjetacarrito"
+        app:layout_constraintVertical_bias="0.775" />
+
     <LinearLayout
         android:id="@+id/bottom_navigation_layout"
         android:layout_width="match_parent"
@@ -449,7 +690,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -457,7 +698,7 @@
 
         <!-- Botón Home -->
         <ImageButton
-            android:id="@+id/likesGoHome"
+            android:id="@+id/carritohome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -466,7 +707,7 @@
 
         <!-- Botón Heart -->
         <ImageButton
-            android:id="@+id/likesGoLikes"
+            android:id="@+id/carritolikes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -475,7 +716,7 @@
 
         <!-- Botón Menu -->
         <ImageButton
-            android:id="@+id/likesGoSubir"
+            android:id="@+id/carritosubidas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -484,7 +725,7 @@
 
         <!-- Botón Shopping Bag -->
         <ImageButton
-            android:id="@+id/likesGoCompra"
+            android:id="@+id/carritocarrito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -493,7 +734,7 @@
 
         <!-- Botón User -->
         <ImageButton
-            android:id="@+id/likesGoPerfil"
+            android:id="@+id/carritoperfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -21,10 +21,34 @@ class subircancion : AppCompatActivity() {
         }
         val perfil = findViewById<ImageButton>(R.id.botonperfil);
         val home = findViewById<ImageButton>(R.id.botoncatalogo);
+        val subidas = findViewById<ImageButton>(R.id.botonsubida);
+        val pagos = findViewById<ImageButton>(R.id.botonpago);
+        val likessubir = findViewById<ImageButton>(R.id.botonmegustas);
         val subirdatoscancion = findViewById<Button>(R.id.botonsubirlosdatos);
 
+
+
+        //catalogogeneros, subircancion, perfiluser, likes, carrito
         perfil.setOnClickListener {
             val intent = Intent(this@subircancion, perfiluser::class.java)
+            startActivity(intent)
+
+
+        }
+        subidas.setOnClickListener {
+            val intent = Intent(this@subircancion, subircancion::class.java)
+            startActivity(intent)
+
+
+        }
+        pagos.setOnClickListener {
+            val intent = Intent(this@subircancion, carrito::class.java)
+            startActivity(intent)
+
+
+        }
+        likessubir.setOnClickListener {
+            val intent = Intent(this@subircancion, likes::class.java)
             startActivity(intent)
 
 
@@ -36,11 +60,14 @@ class subircancion : AppCompatActivity() {
 
         }
 
+
+
         subirdatoscancion.setOnClickListener {
             val intent = Intent(this@subircancion, datossubida::class.java)
             startActivity(intent)
 
 
         }
+
     }
 }

@@ -347,7 +347,7 @@
 
         <!-- Botón Heart -->
         <ImageButton
-            android:id="@+id/navigation_heart"
+            android:id="@+id/botonmegustas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/heartpng"

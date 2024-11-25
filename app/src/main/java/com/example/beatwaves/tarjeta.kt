@@ -21,7 +21,11 @@ class tarjeta : AppCompatActivity() {
         val ircatalogo = findViewById<ImageButton>(R.id.tarjetaGoCatalogo);
         val irsubir = findViewById<ImageButton>(R.id.tarjetaGoSubida);
         val irperfil = findViewById<ImageButton>(R.id.tarjetaGoPerfil);
+        val irlikes = findViewById<ImageButton>(R.id.tarjetaGoLikes);
+        val ircarrito = findViewById<ImageButton>(R.id.tarjetaGoPago);
 
+
+        //catalogogeneros, subircancion, perfiluser, likes, carrito
         ircatalogo.setOnClickListener {
             val intent = Intent(this@tarjeta, catalogogeneros::class.java)
             startActivity(intent)
@@ -36,6 +40,18 @@ class tarjeta : AppCompatActivity() {
         }
         irperfil.setOnClickListener {
             val intent = Intent(this@tarjeta, perfiluser::class.java)
+            startActivity(intent)
+
+
+        }
+        irlikes.setOnClickListener {
+            val intent = Intent(this@tarjeta, likes::class.java)
+            startActivity(intent)
+
+
+        }
+        ircarrito.setOnClickListener {
+            val intent = Intent(this@tarjeta, carrito::class.java)
             startActivity(intent)
 
 

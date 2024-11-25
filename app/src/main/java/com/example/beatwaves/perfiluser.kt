@@ -21,6 +21,8 @@ class perfiluser : AppCompatActivity() {
         }
         val home = findViewById<ImageButton>(R.id.perfiluserGoHome);
         val subir = findViewById<ImageButton>(R.id.perfiluserGoSubir);
+        val iralikes = findViewById<ImageButton>(R.id.perfiluserGoLikes);
+        val iracarrito = findViewById<ImageButton>(R.id.perfiluserGoCompra);
         val editperfil = findViewById<Button>(R.id.botoneditarperfil);
 
         home.setOnClickListener {
@@ -29,6 +31,14 @@ class perfiluser : AppCompatActivity() {
 
 
         }
+
+        iracarrito.setOnClickListener {
+            val intent = Intent(this@perfiluser, carrito::class.java)
+            startActivity(intent)
+
+
+        }
+
         subir.setOnClickListener {
             val intent = Intent(this@perfiluser, subircancion::class.java)
             startActivity(intent)
@@ -38,6 +48,13 @@ class perfiluser : AppCompatActivity() {
 
         editperfil.setOnClickListener {
             val intent = Intent(this@perfiluser, tarjeta::class.java)
+            startActivity(intent)
+
+
+        }
+
+        iralikes.setOnClickListener {
+            val intent = Intent(this@perfiluser, likes::class.java)
             startActivity(intent)
 
 

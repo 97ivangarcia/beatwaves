@@ -8,46 +8,45 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class likes : AppCompatActivity() {
+class carrito : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_likes)
+        setContentView(R.layout.activity_carrito)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val likestohome = findViewById<ImageButton>(R.id.likesGoHome);
-        val likestosubir = findViewById<ImageButton>(R.id.likesGoSubir);
-        val likestocarrito = findViewById<ImageButton>(R.id.likesGoCompra);
-        val likestoperfil = findViewById<ImageButton>(R.id.likesGoPerfil);
+        val carritotohome = findViewById<ImageButton>(R.id.carritohome);
+        val carritotosubir = findViewById<ImageButton>(R.id.carritosubidas);
+        val carritotolikes = findViewById<ImageButton>(R.id.carritolikes);
+        val carritotoperfil = findViewById<ImageButton>(R.id.carritoperfil);
 
-        likestohome.setOnClickListener {
-            val intent = Intent(this@likes, catalogogeneros::class.java)
+        carritotohome.setOnClickListener {
+            val intent = Intent(this@carrito, catalogogeneros::class.java)
             startActivity(intent)
 
 
         }
-        likestosubir.setOnClickListener {
-            val intent = Intent(this@likes, subircancion::class.java)
+        carritotosubir.setOnClickListener {
+            val intent = Intent(this@carrito, subircancion::class.java)
             startActivity(intent)
 
 
         }
-        likestocarrito.setOnClickListener {
-            val intent = Intent(this@likes, carrito::class.java)
+        carritotolikes.setOnClickListener {
+            val intent = Intent(this@carrito, likes::class.java)
             startActivity(intent)
 
 
         }
-        likestoperfil.setOnClickListener {
-            val intent = Intent(this@likes, perfiluser::class.java)
+        carritotoperfil.setOnClickListener {
+            val intent = Intent(this@carrito, perfiluser::class.java)
             startActivity(intent)
 
 
         }
-
     }
 }
