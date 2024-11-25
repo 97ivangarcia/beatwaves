@@ -23,6 +23,10 @@ class generoseleccionado : AppCompatActivity() {
         val generoirhome = findViewById<ImageButton>(R.id.generoGoHome);
         val generoirsubida = findViewById<ImageButton>(R.id.generoGoSubir);
         val generoirperfil = findViewById<ImageButton>(R.id.generoGoPerfil);
+        val botonartista1 = findViewById<Button>(R.id.generoboton1);
+        val botonartista2 = findViewById<Button>(R.id.generoboton2);
+        val botonartista3 = findViewById<Button>(R.id.generoboton3);
+        val botonartista4 = findViewById<Button>(R.id.generoboton4);
 
         generoirhome.setOnClickListener {
             val intent = Intent(this@generoseleccionado, catalogogeneros::class.java)
@@ -39,6 +43,34 @@ class generoseleccionado : AppCompatActivity() {
 
         generoirperfil.setOnClickListener {
             val intent = Intent(this@generoseleccionado, tarjeta::class.java)
+            startActivity(intent)
+
+
+        }
+
+
+        //BOTONES TIENDA ARTISTAS
+
+        botonartista1.setOnClickListener {
+            val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            startActivity(intent)
+
+
+        }
+        botonartista2.setOnClickListener {
+            val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            startActivity(intent)
+
+
+        }
+        botonartista3.setOnClickListener {
+            val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            startActivity(intent)
+
+
+        }
+        botonartista4.setOnClickListener {
+            val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
             startActivity(intent)
 
 
