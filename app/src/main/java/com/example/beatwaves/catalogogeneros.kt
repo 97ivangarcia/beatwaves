@@ -38,6 +38,8 @@ class catalogogeneros : AppCompatActivity() {
         val botonlikes = findViewById<ImageButton>(R.id.navigation_heart);
         val botoncarritomain = findViewById<ImageButton>(R.id.navigation_shopping_bag);
 
+        //unico boton accesible en invitado
+
         val botonsitodnb = findViewById<Button>(R.id.botondnb);
 
 

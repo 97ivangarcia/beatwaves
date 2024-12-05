@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adminpanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".adminpanel">
+
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#333"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/saliricono" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:text="Moderar Canciones"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottom_navigation_layout"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_layout"
+        android:layout_width="394dp"
+        android:layout_height="97dp"
+        android:background="#333"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds">
+
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="10dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/userpng" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Panel Mod"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="328dp"
+        android:layout_height="58dp"
+        android:text="Moderar Usuarios"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_navigation_layout" />
+
+    <TextView
+        android:id="@+id/NombreArtistaBanearCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artista: None"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/NombreCancionBanearCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.541" />
+
+
+    <TextView
+        android:id="@+id/NombreCancionBanearCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canción: None"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.535" />
+
+
+    <Button
+        android:id="@+id/BanearCancionBanearCancion"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#333333"
+        android:gravity="center"
+        android:text="❌"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.566" />
+
+    <Button
+        android:id="@+id/AceptarCancionBanearCancion"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#333333"
+        android:gravity="center"
+        android:text="✅"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/BanearCancionBanearCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.716" />
+
+    <TextView
+        android:id="@+id/NombreUsuarioBanearUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Artista: None"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/BanearUsuarioBanearUsuario"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="136dp"
+        android:backgroundTint="#333333"
+        android:gravity="center"
+        android:text="❌"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/AceptarUsuarioBanearUsuario"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#333333"
+        android:gravity="center"
+        android:text="✅"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/BanearUsuarioBanearUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.744" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
