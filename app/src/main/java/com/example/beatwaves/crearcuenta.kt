@@ -55,16 +55,40 @@ class crearcuenta : AppCompatActivity() {
                 startActivity(intent)
             } else {
                 // Mostrar error si los campos están vacíos
-                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
 
     // Función para guardar datos en la base de datos (simulación)
     private fun saveToDatabase(email: String, password: String) {
-        // Aquí puedes implementar la lógica real para guardar datos:
-        // Por ejemplo, con Firebase o SQLite.
-        // Simularemos el guardado con un log o una lista en memoria.
-        println("Datos guardados -> Email: $email, Contraseña: $password (cifrada en una implementación real)")
+        val dbHelper = DatabaseHelper(this)
+        val result = dbHelper.insertUser(email, password)
+
+        if (result != -1L) {
+            println("Usuario guardado correctamente con ID: $result")
+        } else {
+            println("Error al guardar el usuario")
+        }
+
+    }
+    // Función para mostrar todos los usuarios guardados en la base de datos
+    private fun showAllUsers() {
+        val dbHelper = DatabaseHelper(this)
+        val users = dbHelper.getAllUsers() // Obtener lista de usuarios
+
+        println("Usuarios guardados en la base de datos:")
+        if (users.isNotEmpty()) {
+            users.forEach { user ->
+                println("Email: ${user.first}, Contraseña: ${user.second}")
+            }
+        } else {
+            println("No hay usuarios guardados.")
+        }
     }
 }
+
+
+
+
