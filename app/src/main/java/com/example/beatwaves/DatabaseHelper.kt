@@ -57,4 +57,15 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return users
     }
 
+    fun validateUser(email: String, password: String): Boolean {
+        val db = readableDatabase
+        val query = "SELECT * FROM $TABLE_USERS WHERE $COLUMN_EMAIL = ? AND $COLUMN_PASSWORD = ?"
+        val cursor = db.rawQuery(query, arrayOf(email, password))
+
+        val isValid = cursor.count > 0
+        cursor.close()
+        return isValid
+    }
+
+
 }
