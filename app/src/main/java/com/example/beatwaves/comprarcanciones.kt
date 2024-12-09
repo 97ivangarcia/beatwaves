@@ -3,6 +3,7 @@ package com.example.beatwaves
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,9 +22,33 @@ class comprarcanciones : AppCompatActivity() {
 
         val volvercatalogo = findViewById<Button>(R.id.botonvolver)
 
+        val anadircarrito = findViewById<Button>(R.id.anadircarrito)
+        val comprar = findViewById<Button>(R.id.comprar)
+
+        val usuario = intent.getStringExtra("user")
+
         volvercatalogo.setOnClickListener{
             val intent = Intent(this@comprarcanciones, catalogogeneros::class.java)
             startActivity(intent)
+        }
+
+
+        comprar.setOnClickListener{
+            if (usuario.equals("invitado")){
+                Toast.makeText(this, "Inicia sesión para comprar.", Toast.LENGTH_SHORT).show()
+            }else{
+                //espacio para la funcion del boton
+            }
+
+        }
+
+        anadircarrito.setOnClickListener{
+            if (usuario.equals("invitado")){
+                Toast.makeText(this, "Inicia sesión para añadir al carrito.", Toast.LENGTH_SHORT).show()
+            }else{
+                //espacio para la funcion del boton
+            }
+
         }
     }
 }

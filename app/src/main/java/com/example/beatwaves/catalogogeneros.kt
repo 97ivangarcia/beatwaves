@@ -42,14 +42,19 @@ class catalogogeneros : AppCompatActivity() {
 
         val botonsitodnb = findViewById<Button>(R.id.botondnb);
 
+        val usuario = intent.getStringExtra("user")
+
 
         botonsitodnb.setOnClickListener {
             val intent = Intent(this@catalogogeneros, generoseleccionado::class.java)
+            intent.putExtra("user", "invitado")
             startActivity(intent)
 
 
         }
 
+
+        if (!usuario.equals("invitado")){
         botoncarritomain.setOnClickListener {
             val intent = Intent(this@catalogogeneros, carrito::class.java)
             startActivity(intent)
@@ -74,6 +79,7 @@ class catalogogeneros : AppCompatActivity() {
             val intent = Intent(this@catalogogeneros, subircancion::class.java)
             startActivity(intent)
 
+        }
         }
     }
 }

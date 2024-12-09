@@ -31,6 +31,8 @@ class generoseleccionado : AppCompatActivity() {
         val botonartista3 = findViewById<Button>(R.id.generoboton3);
         val botonartista4 = findViewById<Button>(R.id.generoboton4);
 
+        val usuario = intent.getStringExtra("user")
+
         generoirhome.setOnClickListener {
             val intent = Intent(this@generoseleccionado, catalogogeneros::class.java)
             startActivity(intent)
@@ -38,54 +40,69 @@ class generoseleccionado : AppCompatActivity() {
 
         }
 
-        generoirlikes.setOnClickListener {
-            val intent = Intent(this@generoseleccionado, likes::class.java)
-            startActivity(intent)
+        if (!usuario.equals("invitado")) {
 
+            generoirlikes.setOnClickListener {
+                val intent = Intent(this@generoseleccionado, likes::class.java)
+                startActivity(intent)
+
+
+            }
+
+            generoirsubida.setOnClickListener {
+                val intent = Intent(this@generoseleccionado, subircancion::class.java)
+                startActivity(intent)
+
+
+            }
+
+            generoirperfil.setOnClickListener {
+                val intent = Intent(this@generoseleccionado, tarjeta::class.java)
+                startActivity(intent)
+
+
+            }
 
         }
-
-        generoirsubida.setOnClickListener {
-            val intent = Intent(this@generoseleccionado, subircancion::class.java)
-            startActivity(intent)
-
-
-        }
-
-        generoirperfil.setOnClickListener {
-            val intent = Intent(this@generoseleccionado, tarjeta::class.java)
-            startActivity(intent)
-
-
-        }
-
-
         //BOTONES TIENDA ARTISTAS
 
         botonartista1.setOnClickListener {
             val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            if (usuario.equals("invitado")){
+                intent.putExtra("user",  "invitado")
+            }
             startActivity(intent)
 
 
         }
         botonartista2.setOnClickListener {
             val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            if (usuario.equals("invitado")){
+                intent.putExtra("user",  "invitado")
+            }
             startActivity(intent)
 
 
         }
         botonartista3.setOnClickListener {
             val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            if (usuario.equals("invitado")){
+                intent.putExtra("user",  "invitado")
+            }
             startActivity(intent)
 
 
         }
         botonartista4.setOnClickListener {
             val intent = Intent(this@generoseleccionado, comprarcanciones::class.java)
+            if (usuario.equals("invitado")){
+                intent.putExtra("user",  "invitado")
+            }
             startActivity(intent)
 
 
         }
+
 
     }
 }

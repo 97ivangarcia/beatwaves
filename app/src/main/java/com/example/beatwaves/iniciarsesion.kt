@@ -43,9 +43,17 @@ class iniciarsesion : AppCompatActivity() {
                 val isValidUser = dbHelper.validateUser(email, password)
 
                 if (isValidUser) {
-                    Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@iniciarsesion, catalogogeneros::class.java)
-                    startActivity(intent)
+
+                    if (email.equals("admin")&&password.equals("admin")){
+                        Toast.makeText(this, "Accediendo al panel de admin", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@iniciarsesion, adminpanel::class.java)
+                        startActivity(intent)
+                    }else{
+                        Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@iniciarsesion, catalogogeneros::class.java)
+                        startActivity(intent)
+                    }
+
                 } else {
                     Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
                 }

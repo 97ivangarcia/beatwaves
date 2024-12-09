@@ -12,6 +12,11 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        val dbHelper = DatabaseHelper(this)
+        val result = dbHelper.insertUser("admin", "admin")
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -39,6 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         bton3.setOnClickListener{
             val intent = Intent(this@MainActivity, catalogogeneros::class.java)
+            intent.putExtra("user", "invitado")
             startActivity(intent)
         }
 
