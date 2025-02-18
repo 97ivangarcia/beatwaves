@@ -78,7 +78,7 @@
             <!-- Canción 1: Bangarang -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="121dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -102,6 +102,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp" />
 
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -109,19 +110,38 @@
                         android:textColor="@color/white"
                         android:textSize="16sp" />
 
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2€"
                         android:textColor="#FD00E4"
                         android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/heartButton"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/heartpng"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:tint="#FD00E4" />
+
+
+
+
                 </LinearLayout>
+                <!--
+
+
+                    -->
             </LinearLayout>
 
             <!-- Canción 2: First of the Year (Equinox) -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="121dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -158,13 +178,19 @@
                         android:text="1,5€"
                         android:textColor="#FD00E4"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/heartpng"
+                        app:tint="#FD00E4" />
                 </LinearLayout>
             </LinearLayout>
 
             <!-- Canción 3: Scary Monsters and Nice Sprites -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="121dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -201,13 +227,20 @@
                         android:text="2€"
                         android:textColor="#FD00E4"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/heartpng"
+                        app:tint="#FD00E4" />
+
                 </LinearLayout>
             </LinearLayout>
 
             <!-- Canción 4: Kill Everybody -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="121dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -244,13 +277,19 @@
                         android:text="1,2€"
                         android:textColor="#FD00E4"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/heartpng"
+                        app:tint="#FD00E4" />
                 </LinearLayout>
             </LinearLayout>
 
             <!-- Canción 5: Ragga Bomb -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="121dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -287,6 +326,12 @@
                         android:text="1,8€"
                         android:textColor="#FD00E4"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/heartpng"
+                        app:tint="#FD00E4" />
                 </LinearLayout>
             </LinearLayout>
 
