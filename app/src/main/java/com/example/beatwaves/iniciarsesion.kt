@@ -1,5 +1,6 @@
 package com.example.beatwaves
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -24,18 +25,16 @@ class iniciarsesion : AppCompatActivity() {
         val botonVolver = findViewById<Button>(R.id.iniciarvolver)
         val botonIniciar = findViewById<Button>(R.id.iniciarsiguiente)
 
-        // Acción para el botón "Volver"
         botonVolver.setOnClickListener {
             val intent = Intent(this@iniciarsesion, MainActivity::class.java)
             startActivity(intent)
         }
 
-        // Acción para el botón "Iniciar Sesión"
         botonIniciar.setOnClickListener {
             val emailField = findViewById<EditText>(R.id.editTextTextEmailAddress2)
             val passwordField = findViewById<EditText>(R.id.editTextTextEmailAddress3)
 
-            val email = emailField.text.toString()
+            val email = emailField.text.toString().trim().lowercase()
             val password = passwordField.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
@@ -43,17 +42,20 @@ class iniciarsesion : AppCompatActivity() {
                 val isValidUser = dbHelper.validateUser(email, password)
 
                 if (isValidUser) {
+                    dbHelper.getUserByEmail(email).use { cursor ->
+                        if (cursor.moveToFirst()) {
+                            val userId = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_ID))
 
-                    if (email.equals("admin")&&password.equals("admin")){
-                        Toast.makeText(this, "Accediendo al panel de admin", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@iniciarsesion, adminpanel::class.java)
-                        startActivity(intent)
-                    }else{
-                        Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@iniciarsesion, catalogogeneros::class.java)
-                        startActivity(intent)
+                            // Guardar userId en SharedPreferences
+                            val prefs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+                            prefs.edit().putInt("userId", userId).apply()
+
+                            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@iniciarsesion, catalogogeneros::class.java)
+                            startActivity(intent)
+                            finish() // Cierra la actividad de login
+                        }
                     }
-
                 } else {
                     Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
                 }

@@ -47,6 +47,7 @@
             android:src="@drawable/heartpng"
             android:clickable="true"
             android:focusable="true"
-            app:tint="#FD00E4"/>
+            app:tint="#FD00E4"
+            />
     </LinearLayout>
 </LinearLayout>

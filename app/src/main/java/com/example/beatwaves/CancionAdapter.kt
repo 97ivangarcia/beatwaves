@@ -1,15 +1,22 @@
 package com.example.beatwaves
 
+import Cancion
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class CancionAdapter(private val canciones: List<Cancion>) :
-    RecyclerView.Adapter<CancionAdapter.CancionViewHolder>() {
+class CancionAdapter(
+    private val userId: Int,
+    private val databaseHelper: DatabaseHelper,
+    private val onFavoriteUpdated: () -> Unit
+) : RecyclerView.Adapter<CancionAdapter.CancionViewHolder>() {
+
+    private val canciones = mutableListOf<Cancion>()
 
     class CancionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imagenCancion: ImageView = view.findViewById(R.id.imagenCancion)
@@ -27,32 +34,42 @@ class CancionAdapter(private val canciones: List<Cancion>) :
 
     override fun onBindViewHolder(holder: CancionViewHolder, position: Int) {
         val cancion = canciones[position]
-
-        // Convertir nombre de imagen (String) a ID de recurso (Int)
         val context = holder.itemView.context
-        val resId = context.resources.getIdentifier(cancion.imagenResName, "drawable", context.packageName)
 
-        if (resId != 0) {
-            holder.imagenCancion.setImageResource(resId) // Asigna la imagen si se encuentra
-        } else {
-            holder.imagenCancion.setImageResource(R.drawable.heartpngfull) // Imagen por defecto si no existe
-        }
+        val resId = context.resources.getIdentifier(
+            cancion.imagenResName,
+            "drawable",
+            context.packageName
+        )
+        holder.imagenCancion.setImageResource(if (resId != 0) resId else R.drawable.heartpngfull)
 
         holder.titulo.text = cancion.titulo
         holder.artista.text = cancion.artista
         holder.precio.text = cancion.precio
 
-        // Configurar botón de like
         holder.botonLike.setImageResource(
             if (cancion.isLiked) R.drawable.heartpngfull else R.drawable.heartpng
         )
 
         holder.botonLike.setOnClickListener {
-            cancion.isLiked = !cancion.isLiked
-            notifyItemChanged(position)
+            if (userId == -1) {
+                Toast.makeText(context, "Inicia sesión para guardar favoritos", Toast.LENGTH_SHORT).show()
+            } else {
+                val nuevoEstado = !cancion.isLiked
+                if (databaseHelper.toggleFavorito(userId, cancion.id)) {
+                    canciones[position].isLiked = nuevoEstado
+                    notifyItemChanged(position)
+                    onFavoriteUpdated()
+                }
+            }
         }
     }
 
+    fun updateData(newCanciones: List<Cancion>) {
+        canciones.clear()
+        canciones.addAll(newCanciones)
+        notifyDataSetChanged()
+    }
 
     override fun getItemCount(): Int = canciones.size
 }
