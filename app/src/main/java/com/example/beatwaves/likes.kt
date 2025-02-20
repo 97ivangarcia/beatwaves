@@ -2,8 +2,10 @@ package com.example.beatwaves
 
 import android.content.Context
 import android.content.Intent
+import android.database.Cursor
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +46,20 @@ class likes : AppCompatActivity() {
 
         dbHelper = DatabaseHelper(this)
 
+        // Recuperar y mostrar el correo electrónico del usuario en el TextView
+        val textViewUser = findViewById<TextView>(R.id.textView7)
+        val db = dbHelper.readableDatabase
+        val query = "SELECT ${DatabaseHelper.COLUMN_EMAIL} FROM ${DatabaseHelper.TABLE_USERS} WHERE ${DatabaseHelper.COLUMN_ID} = ?"
+        val cursor: Cursor = db.rawQuery(query, arrayOf(userId.toString()))
+        if (cursor.moveToFirst()) {
+            val email = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_EMAIL))
+            textViewUser.text = "$email\nID: $userId"
+        } else {
+            textViewUser.text = "Usuario no encontrado"
+        }
+        cursor.close()
+
+        // Configuración del RecyclerView de favoritos
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerFavoritos)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
